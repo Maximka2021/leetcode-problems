@@ -35,3 +35,9 @@ let inorderTraversal = function(root) {
     }
 
 // Majority Element
+
+// Count Odd Numbers in an Interval Range
+    function countOdd(low, high){
+        return Math.floor((high + 1) / 2) - Math.floor(low / 2)
+    }
+// Count Odd Numbers in an Interval Range
