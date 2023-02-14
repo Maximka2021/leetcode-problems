@@ -41,3 +41,16 @@ let inorderTraversal = function(root) {
         return Math.floor((high + 1) / 2) - Math.floor(low / 2)
     }
 // Count Odd Numbers in an Interval Range
+
+// Contains Duplicate
+var containsDuplicate = function(nums) {
+    let map = new Set();
+    for(let i = 0; i < nums.length; i++){
+        if(map.has(nums[i])){
+            return true;
+        }
+        map.add(nums[i], i)
+    }
+    return false;
+}
+//Contains Duplicate
