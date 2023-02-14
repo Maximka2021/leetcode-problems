@@ -69,3 +69,16 @@ var maxProfit = function(prices) {
     return profit
 };
 //Best Time to Buy and Sell Stock
+
+//Two Sum
+var twoSum = function(nums, target) {
+    let map = new Map();
+      for(let i in nums){
+          let diff = target - nums[i];
+          if(map.has(diff)){
+              return [map.get(diff), i]
+          }
+          map.set(nums[i], i)
+      }
+  };
+//Two Sum
