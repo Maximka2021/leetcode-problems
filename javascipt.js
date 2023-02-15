@@ -99,3 +99,18 @@ var addToArrayForm = function(num, k) {
     return sum.toString().split('')
 };
 //Add to Array-Form of Integer
+
+//Reverse Linked List
+var reverseList = function(head) {
+    let prev = null;
+    let curr = head;
+    let next = null;
+    while(curr){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+};
+//Reverse Linked List
