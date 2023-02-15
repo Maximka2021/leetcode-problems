@@ -90,3 +90,12 @@ var addBinary = function(a, b) {
     return (aInt + bInt).toString(2)
 };
 //Add Binary
+
+//Add to Array-Form of Integer
+var addToArrayForm = function(num, k) {
+    let arrInt = BigInt(num.join(''));
+    k = BigInt(k)
+    let sum = arrInt + k
+    return sum.toString().split('')
+};
+//Add to Array-Form of Integer
