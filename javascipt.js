@@ -152,3 +152,24 @@ var minDiffInBST = function(root) {
 };
 //Minimum Distance Between BST Nodes
 
+//Remove Linked List Elements
+var removeElements = function(head, val) {
+    if(!head) return head;
+
+    while(head){
+        if(head.val === val){
+            head = head.next
+        }else{
+            break;
+        }
+    }
+
+    let curr = head;
+    while(curr && curr.next){
+        if(curr.next.val === val) curr.next = curr.next.next;
+        else curr = curr.next   
+    }
+    return head;
+};
+//Remove Linked List Elements
+
