@@ -131,3 +131,24 @@ var invertTree = function(root) {
 };
 //Invert Binary Tree
 
+//Minimum Distance Between BST Nodes
+var minDiffInBST = function(root) {
+    let values = [];
+
+    const findValues = root => {
+        if(root){
+            values.push(root.val)
+            findValues(root.left)
+            findValues(root.right)
+        }
+    }
+    findValues(root)
+
+    const dist = values
+    .sort((a, b) => a - b)
+    .map((el, i, arr) => arr[i + 1] - el)
+    dist[dist.length - 1] = 1111111;
+    return Math.min(...dist) 
+};
+//Minimum Distance Between BST Nodes
+
