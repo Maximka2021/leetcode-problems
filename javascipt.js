@@ -114,3 +114,20 @@ var reverseList = function(head) {
     return prev;
 };
 //Reverse Linked List
+
+//Invert Binary Tree
+var invertTree = function(root) {
+    if(!root) return root
+    
+    invertTree(root.left)
+    invertTree(root.right)
+
+    const temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+
+    return root;
+
+};
+//Invert Binary Tree
+
