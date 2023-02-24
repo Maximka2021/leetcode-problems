@@ -197,3 +197,16 @@ var merge = function(nums1, m, nums2, n) {
 };
 //Merge Sorted Array
 
+//Contains Duplicate
+var containsDuplicate = function(nums) {
+    let map = new Set();
+    for(let i = 0; i < nums.length; i++){
+        if(map.has(nums[i])){
+            return true;
+        }
+        map.add(nums[i], i)
+    }
+    return false;
+}
+//Contains Duplicate
+
