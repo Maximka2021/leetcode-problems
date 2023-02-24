@@ -190,3 +190,10 @@ var deleteDuplicates = function(head) {
 };
 //Remove Duplicates from Sorted List
 
+//Merge Sorted Array
+var merge = function(nums1, m, nums2, n) {
+    nums1.splice(m, n, ...nums2)
+    nums1.sort((a, b) => a - b)
+};
+//Merge Sorted Array
+
