@@ -240,3 +240,15 @@ function findShortestString(arr) {
   }
 //Find Shortest String (Recursion)
 
+//Sort array with recursion
+function selectionSort(arr, i = 0) {
+    if(i === arr.length) return arr;
+    if(arr[i] > arr[i + 1]){
+      let temp = arr[i + 1]
+      arr[i + 1] = arr[i]
+      arr[i] = temp
+    }
+    return selectionSort(arr, i + 1)
+  }
+//Sort array with recursion
+
