@@ -225,3 +225,18 @@ var pivotIndex = function(nums) {
 };
 //Find Pivot Index
 
+//Find Shortest String (Recursion)
+function findShortestString(arr) {
+    if(arr.length > 1){
+      if(arr[0].length > arr[1].length){
+        arr.splice(0, 1)
+        findShortestString(arr)
+      }else{
+        arr.splice(1, 1)
+        findShortestString(arr)
+      }
+    }
+    return arr[0]
+  }
+//Find Shortest String (Recursion)
+
