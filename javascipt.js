@@ -1,5 +1,4 @@
 // Binary Tree Inorder Traversal
-
 let inorderTraversal = function(root) {
     let stack = [];
     let res = [];
@@ -16,11 +15,9 @@ let inorderTraversal = function(root) {
     }
     return res;
 }
-
 // Binary Tree Inorder Traversal
 
 // Majority Element
-
     let majorityElement = function(nums){
         let map = new Map();
         for(let num of nums){
@@ -33,7 +30,6 @@ let inorderTraversal = function(root) {
             if(map.get(num) > nums.length / 2) return num
         }
     }
-
 // Majority Element
 
 // Count Odd Numbers in an Interval Range
@@ -251,4 +247,13 @@ function selectionSort(arr, i = 0) {
     return selectionSort(arr, i + 1)
   }
 //Sort array with recursion
+
+//Rotate array clockwise
+function func(arr, k) {
+    for(let i = 0; i < k; i++){
+      arr.unshift(arr.pop())
+    }
+    return arr
+  }
+//Rotate array clockwise
 
