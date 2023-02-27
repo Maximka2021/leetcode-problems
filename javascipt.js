@@ -257,3 +257,25 @@ function func(arr, k) {
   }
 //Rotate array clockwise
 
+//Valid Parenthesis
+var isValid = function(s) {
+    if(s.length === 0 || s.length === 1) return false;
+    let arr = [];
+    for(let i = 0; i < s.length; i++){
+        switch(s[i]){
+            case("("): arr.push(")")
+                break;
+            case("["): arr.push("]")
+                break;
+            case("{"): arr.push("}")
+                break;
+            default:
+                if(s[i] !== arr.pop()){
+                    return false;
+                }
+        }
+    }
+    return arr.length === 0
+};
+//Valid Parenthesis
+
