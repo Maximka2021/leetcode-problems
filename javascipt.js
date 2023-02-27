@@ -296,5 +296,29 @@ var isValid = function(s) {
     }
     return arr.length === 0
 };
+
+///////////////////////
+
+var isValid = function(s) {
+    if(s.length === 0 || s.length === 1) return false;
+    let arr = [];
+    for(let i = 0; i < s.length; i++){
+        if(s[i] === '('){
+            arr.push(")")
+        }else if(s[i] === "["){
+            arr.push("]")
+        }else if(s[i] === "{"){
+            arr.push("}")
+        }else if(s[i] !== arr.pop()){
+            return false;
+        }
+    }
+    if(arr.length === 0){
+        return true
+    }else{
+        return false;
+    }
+        
+};
 //Valid Parenthesis
 
