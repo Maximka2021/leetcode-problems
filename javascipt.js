@@ -277,5 +277,24 @@ var isValid = function(s) {
     }
     return arr.length === 0
 };
+
+//////////////////////
+
+var isValid = function(s) {
+    let arr = [];
+    let map = {
+        '(':')',
+        '[':']',
+        '{':'}'
+    }
+    for(let i in s){
+        if(map[s[i]]){
+            arr.push(map[s[i]])
+        }else if(s[i] !== arr.pop()){
+            return false;
+        }
+    }
+    return arr.length === 0
+};
 //Valid Parenthesis
 
