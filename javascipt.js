@@ -1,20 +1,20 @@
 // Binary Tree Inorder Traversal
-// let inorderTraversal = function(root) {
-//     let stack = [];
-//     let res = [];
+let inorderTraversal = function(root) {
+    let stack = [];
+    let res = [];
 
-//     while(root || stack.length){
-//         if(root){
-//            stack.push(root)
-//            root = root.left 
-//         }else{
-//             root = stack.pop();
-//             res.push(root)
-//             root = root.right;
-//         }
-//     }
-//     return res;
-// }
+    while(root || stack.length){
+        if(root){
+           stack.push(root)
+           root = root.left 
+        }else{
+            root = stack.pop();
+            res.push(root)
+            root = root.right;
+        }
+    }
+    return res;
+}
 // Binary Tree Inorder Traversal
 
 // Majority Element
@@ -349,3 +349,17 @@ var removeDuplicates = function(nums) {
     }
 };
 //Remove Duplicates from Sorted Array
+
+//Power of Four
+var isPowerOfFour = function(n) {
+    // while(n > 1){
+    //     n /= 4 
+    // }
+    // return n === 1
+    console.log(n)
+    if(n > 1){
+        return isPowerOfFour(n/4)
+    }
+    return n === 1
+};
+//Power of Four
